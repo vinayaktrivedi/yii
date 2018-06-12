@@ -1,0 +1,39 @@
+version: "3.1"
+services:
+    apache_server:
+      image: nimmis/apache-php5
+      container_name: apache_server_php
+      ports:
+        - "80:80"
+      working_dir: /application
+      volumes:
+          - .:/application
+          - ./phpdocker/apache/apache.conf:/etc/apache2/sites-available/000-default.conf
+      links:
+        - memcached
+        - redis
+    mysql:
+      image: mysql:5.7
+      container_name: mysql
+      working_dir: /application
+      volumes:
+        - .:/application
+      environment:
+        - MYSQL_ROOT_PASSWORD=root
+        - MYSQL_DATABASE=yiiplus
+        - MYSQL_USER=pe_user
+        - MYSQL_PASSWORD=pe_pass
+      ports:
+        - "10002:3306"
+    memcached:
+      image: memcached:alpine
+      container_name: memcached
+      ports:
+        - "7999:11211"
+      expose:
+        - "11211"
+    redis:
+      image: redis:alpine
+      container_name: redis
+      expose:
+        - "6379"

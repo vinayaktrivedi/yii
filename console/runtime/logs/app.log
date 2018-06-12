@@ -1,0 +1,1811 @@
+2018-05-15 04:10:47 [-][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[HY000] [2002] No such file or directory' in /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php:687
+Stack trace:
+#0 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php(687): PDO->__construct('mysql:host=loca...', 'root', '', NULL)
+#1 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php(613): yii\db\Connection->createPdoInstance()
+#2 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php(996): yii\db\Connection->open()
+#3 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php(983): yii\db\Connection->getMasterPdo()
+#4 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Command.php(253): yii\db\Connection->getSlavePdo()
+#5 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Command.php(1143): yii\db\Command->prepare(true)
+#6 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Command.php(399): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/mysql/Schema.php(312): yii\db\Command->queryAll()
+#8 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Schema.php(744): yii\db\mysql\Schema->loadTableSchema('migration')
+#10 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Schema.php(194): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#11 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/console/controllers/MigrateController.php(210): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#12 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(875): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#13 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(166): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#14 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#15 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#16 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#17 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/console/Controller.php(148): yii\base\Controller->runAction('', Array)
+#18 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/base/Module.php(528): yii\console\Controller->runAction('', Array)
+#19 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#20 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#21 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/base/Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#22 /Users/ameyabapat/Desktop/yii framework/yiiplus/yii(23): yii\base\Application->run()
+#23 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[HY000] [2002] No such file or directory' in /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php:624
+Stack trace:
+#0 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php(996): yii\db\Connection->open()
+#1 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php(983): yii\db\Connection->getMasterPdo()
+#2 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Command.php(253): yii\db\Connection->getSlavePdo()
+#3 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Command.php(1143): yii\db\Command->prepare(true)
+#4 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Command.php(399): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/mysql/Schema.php(312): yii\db\Command->queryAll()
+#6 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Schema.php(744): yii\db\mysql\Schema->loadTableSchema('migration')
+#8 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Schema.php(194): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#9 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/console/controllers/MigrateController.php(210): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#10 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(875): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#11 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(166): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#12 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#13 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#14 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#15 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/console/Controller.php(148): yii\base\Controller->runAction('', Array)
+#16 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/base/Module.php(528): yii\console\Controller->runAction('', Array)
+#17 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#18 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#19 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/base/Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#20 /Users/ameyabapat/Desktop/yii framework/yiiplus/yii(23): yii\base\Application->run()
+#21 {main}
+Additional Information:
+
+2018-05-15 04:10:47 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'TERM_PROGRAM' => 'Apple_Terminal'
+    'SHELL' => '/bin/bash'
+    'TERM' => 'xterm-256color'
+    'TMPDIR' => '/var/folders/gl/2t4hp82s0_3_2zp11dvzj0jm0000gn/T/'
+    'Apple_PubSub_Socket_Render' => '/private/tmp/com.apple.launchd.xOrOQvUR1F/Render'
+    'TERM_PROGRAM_VERSION' => '388.1.1'
+    'OLDPWD' => '/Users/ameyabapat/Desktop/yii framework'
+    'TERM_SESSION_ID' => '52B1E01A-8C9D-483B-8133-16AE31327F2E'
+    'USER' => 'ameyabapat'
+    'SSH_AUTH_SOCK' => '/private/tmp/com.apple.launchd.eck9OeYRwh/Listeners'
+    '__CF_USER_TEXT_ENCODING' => '0x1F5:0x0:0x0'
+    'PATH' => '/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin'
+    'PWD' => '/Users/ameyabapat/Desktop/yii framework/yiiplus'
+    'XPC_FLAGS' => '0x0'
+    'XPC_SERVICE_NAME' => '0'
+    'SHLVL' => '1'
+    'HOME' => '/Users/ameyabapat'
+    'LOGNAME' => 'ameyabapat'
+    'LC_CTYPE' => 'UTF-8'
+    '_' => './yii'
+    'PHP_SELF' => './yii'
+    'SCRIPT_NAME' => './yii'
+    'SCRIPT_FILENAME' => './yii'
+    'PATH_TRANSLATED' => './yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1526357447.3957
+    'REQUEST_TIME' => 1526357447
+    'argv' => [
+        0 => './yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
+2018-05-15 04:12:35 [-][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[HY000] [2002] No such file or directory' in /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php:687
+Stack trace:
+#0 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php(687): PDO->__construct('mysql:host=loca...', 'root', 'root', NULL)
+#1 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php(613): yii\db\Connection->createPdoInstance()
+#2 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php(996): yii\db\Connection->open()
+#3 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php(983): yii\db\Connection->getMasterPdo()
+#4 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Command.php(253): yii\db\Connection->getSlavePdo()
+#5 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Command.php(1143): yii\db\Command->prepare(true)
+#6 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Command.php(399): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/mysql/Schema.php(312): yii\db\Command->queryAll()
+#8 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Schema.php(744): yii\db\mysql\Schema->loadTableSchema('migration')
+#10 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Schema.php(194): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#11 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/console/controllers/MigrateController.php(210): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#12 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(875): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#13 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(166): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#14 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#15 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#16 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#17 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/console/Controller.php(148): yii\base\Controller->runAction('', Array)
+#18 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/base/Module.php(528): yii\console\Controller->runAction('', Array)
+#19 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#20 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#21 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/base/Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#22 /Users/ameyabapat/Desktop/yii framework/yiiplus/yii(23): yii\base\Application->run()
+#23 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[HY000] [2002] No such file or directory' in /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php:624
+Stack trace:
+#0 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php(996): yii\db\Connection->open()
+#1 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php(983): yii\db\Connection->getMasterPdo()
+#2 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Command.php(253): yii\db\Connection->getSlavePdo()
+#3 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Command.php(1143): yii\db\Command->prepare(true)
+#4 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Command.php(399): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/mysql/Schema.php(312): yii\db\Command->queryAll()
+#6 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Schema.php(744): yii\db\mysql\Schema->loadTableSchema('migration')
+#8 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Schema.php(194): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#9 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/console/controllers/MigrateController.php(210): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#10 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(875): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#11 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(166): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#12 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#13 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#14 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#15 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/console/Controller.php(148): yii\base\Controller->runAction('', Array)
+#16 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/base/Module.php(528): yii\console\Controller->runAction('', Array)
+#17 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#18 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#19 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/base/Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#20 /Users/ameyabapat/Desktop/yii framework/yiiplus/yii(23): yii\base\Application->run()
+#21 {main}
+Additional Information:
+
+2018-05-15 04:12:35 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'TERM_PROGRAM' => 'Apple_Terminal'
+    'SHELL' => '/bin/bash'
+    'TERM' => 'xterm-256color'
+    'TMPDIR' => '/var/folders/gl/2t4hp82s0_3_2zp11dvzj0jm0000gn/T/'
+    'Apple_PubSub_Socket_Render' => '/private/tmp/com.apple.launchd.xOrOQvUR1F/Render'
+    'TERM_PROGRAM_VERSION' => '388.1.1'
+    'OLDPWD' => '/Users/ameyabapat/Desktop/yii framework/yiiplus/common'
+    'TERM_SESSION_ID' => '52B1E01A-8C9D-483B-8133-16AE31327F2E'
+    'USER' => 'ameyabapat'
+    'SSH_AUTH_SOCK' => '/private/tmp/com.apple.launchd.eck9OeYRwh/Listeners'
+    '__CF_USER_TEXT_ENCODING' => '0x1F5:0x0:0x0'
+    'PATH' => '/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin'
+    'PWD' => '/Users/ameyabapat/Desktop/yii framework/yiiplus'
+    'XPC_FLAGS' => '0x0'
+    'XPC_SERVICE_NAME' => '0'
+    'SHLVL' => '1'
+    'HOME' => '/Users/ameyabapat'
+    'LOGNAME' => 'ameyabapat'
+    'LC_CTYPE' => 'UTF-8'
+    '_' => './yii'
+    'PHP_SELF' => './yii'
+    'SCRIPT_NAME' => './yii'
+    'SCRIPT_FILENAME' => './yii'
+    'PATH_TRANSLATED' => './yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1526357555.1101
+    'REQUEST_TIME' => 1526357555
+    'argv' => [
+        0 => './yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
+2018-05-15 04:16:13 [-][-][-][error][yii\db\Exception] exception 'yii\base\ErrorException' with message 'PDO::__construct(): php_network_getaddresses: getaddrinfo failed: nodename nor servname provided, or not known' in /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php:687
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'PDO::__construc...', '/Users/ameyabap...', 687, Array)
+#1 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php(687): PDO->__construct('mysql:host=mysq...', 'root', 'root', NULL)
+#2 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php(613): yii\db\Connection->createPdoInstance()
+#3 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php(996): yii\db\Connection->open()
+#4 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php(983): yii\db\Connection->getMasterPdo()
+#5 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Command.php(253): yii\db\Connection->getSlavePdo()
+#6 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Command.php(1143): yii\db\Command->prepare(true)
+#7 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Command.php(399): yii\db\Command->queryInternal('fetchAll', NULL)
+#8 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/mysql/Schema.php(312): yii\db\Command->queryAll()
+#9 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#10 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Schema.php(744): yii\db\mysql\Schema->loadTableSchema('migration')
+#11 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Schema.php(194): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#12 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/console/controllers/MigrateController.php(210): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#13 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(875): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#14 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(166): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#15 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#16 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#17 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#18 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/console/Controller.php(148): yii\base\Controller->runAction('', Array)
+#19 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/base/Module.php(528): yii\console\Controller->runAction('', Array)
+#20 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#21 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#22 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/base/Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#23 /Users/ameyabapat/Desktop/yii framework/yiiplus/yii(23): yii\base\Application->run()
+#24 {main}
+
+Next exception 'PDOException' with message 'SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: nodename nor servname provided, or not known' in /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php:687
+Stack trace:
+#0 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php(0): PDO->__construct()
+#1 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php(613): yii\db\Connection->createPdoInstance()
+#2 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php(996): yii\db\Connection->open()
+#3 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php(983): yii\db\Connection->getMasterPdo()
+#4 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Command.php(253): yii\db\Connection->getSlavePdo()
+#5 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Command.php(1143): yii\db\Command->prepare(true)
+#6 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Command.php(399): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/mysql/Schema.php(312): yii\db\Command->queryAll()
+#8 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Schema.php(744): yii\db\mysql\Schema->loadTableSchema('migration')
+#10 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Schema.php(194): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#11 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/console/controllers/MigrateController.php(210): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#12 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(875): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#13 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(166): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#14 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#15 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#16 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#17 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/console/Controller.php(148): yii\base\Controller->runAction('', Array)
+#18 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/base/Module.php(528): yii\console\Controller->runAction('', Array)
+#19 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#20 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#21 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/base/Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#22 /Users/ameyabapat/Desktop/yii framework/yiiplus/yii(23): yii\base\Application->run()
+#23 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: nodename nor servname provided, or not known' in /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php:624
+Stack trace:
+#0 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php(996): yii\db\Connection->open()
+#1 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php(983): yii\db\Connection->getMasterPdo()
+#2 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Command.php(253): yii\db\Connection->getSlavePdo()
+#3 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Command.php(1143): yii\db\Command->prepare(true)
+#4 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Command.php(399): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/mysql/Schema.php(312): yii\db\Command->queryAll()
+#6 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Schema.php(744): yii\db\mysql\Schema->loadTableSchema('migration')
+#8 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Schema.php(194): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#9 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/console/controllers/MigrateController.php(210): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#10 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(875): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#11 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(166): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#12 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#13 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#14 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#15 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/console/Controller.php(148): yii\base\Controller->runAction('', Array)
+#16 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/base/Module.php(528): yii\console\Controller->runAction('', Array)
+#17 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#18 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#19 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/base/Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#20 /Users/ameyabapat/Desktop/yii framework/yiiplus/yii(23): yii\base\Application->run()
+#21 {main}
+Additional Information:
+
+2018-05-15 04:16:13 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'TERM_PROGRAM' => 'Apple_Terminal'
+    'SHELL' => '/bin/bash'
+    'TERM' => 'xterm-256color'
+    'TMPDIR' => '/var/folders/gl/2t4hp82s0_3_2zp11dvzj0jm0000gn/T/'
+    'Apple_PubSub_Socket_Render' => '/private/tmp/com.apple.launchd.xOrOQvUR1F/Render'
+    'TERM_PROGRAM_VERSION' => '388.1.1'
+    'OLDPWD' => '/Users/ameyabapat/Desktop/yii framework/yiiplus/common'
+    'TERM_SESSION_ID' => '52B1E01A-8C9D-483B-8133-16AE31327F2E'
+    'USER' => 'ameyabapat'
+    'SSH_AUTH_SOCK' => '/private/tmp/com.apple.launchd.eck9OeYRwh/Listeners'
+    '__CF_USER_TEXT_ENCODING' => '0x1F5:0x0:0x0'
+    'PATH' => '/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin'
+    'PWD' => '/Users/ameyabapat/Desktop/yii framework/yiiplus'
+    'XPC_FLAGS' => '0x0'
+    'XPC_SERVICE_NAME' => '0'
+    'SHLVL' => '1'
+    'HOME' => '/Users/ameyabapat'
+    'LOGNAME' => 'ameyabapat'
+    'LC_CTYPE' => 'UTF-8'
+    '_' => './yii'
+    'PHP_SELF' => './yii'
+    'SCRIPT_NAME' => './yii'
+    'SCRIPT_FILENAME' => './yii'
+    'PATH_TRANSLATED' => './yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1526357773.2572
+    'REQUEST_TIME' => 1526357773
+    'argv' => [
+        0 => './yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
+2018-05-15 06:17:13 [-][-][-][error][yii\db\Exception] exception 'yii\base\ErrorException' with message 'PDO::__construct(): php_network_getaddresses: getaddrinfo failed: nodename nor servname provided, or not known' in /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php:687
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'PDO::__construc...', '/Users/ameyabap...', 687, Array)
+#1 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php(687): PDO->__construct('mysql:host=mysq...', 'root', 'root', NULL)
+#2 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php(613): yii\db\Connection->createPdoInstance()
+#3 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php(996): yii\db\Connection->open()
+#4 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php(983): yii\db\Connection->getMasterPdo()
+#5 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Command.php(253): yii\db\Connection->getSlavePdo()
+#6 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Command.php(1143): yii\db\Command->prepare(true)
+#7 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Command.php(399): yii\db\Command->queryInternal('fetchAll', NULL)
+#8 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/mysql/Schema.php(312): yii\db\Command->queryAll()
+#9 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#10 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Schema.php(744): yii\db\mysql\Schema->loadTableSchema('migration')
+#11 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Schema.php(194): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#12 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/console/controllers/MigrateController.php(210): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#13 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(875): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#14 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(166): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#15 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#16 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#17 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#18 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/console/Controller.php(148): yii\base\Controller->runAction('', Array)
+#19 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/base/Module.php(528): yii\console\Controller->runAction('', Array)
+#20 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#21 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#22 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/base/Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#23 /Users/ameyabapat/Desktop/yii framework/yiiplus/yii(23): yii\base\Application->run()
+#24 {main}
+
+Next exception 'PDOException' with message 'SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: nodename nor servname provided, or not known' in /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php:687
+Stack trace:
+#0 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php(0): PDO->__construct()
+#1 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php(613): yii\db\Connection->createPdoInstance()
+#2 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php(996): yii\db\Connection->open()
+#3 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php(983): yii\db\Connection->getMasterPdo()
+#4 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Command.php(253): yii\db\Connection->getSlavePdo()
+#5 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Command.php(1143): yii\db\Command->prepare(true)
+#6 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Command.php(399): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/mysql/Schema.php(312): yii\db\Command->queryAll()
+#8 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Schema.php(744): yii\db\mysql\Schema->loadTableSchema('migration')
+#10 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Schema.php(194): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#11 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/console/controllers/MigrateController.php(210): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#12 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(875): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#13 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(166): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#14 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#15 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#16 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#17 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/console/Controller.php(148): yii\base\Controller->runAction('', Array)
+#18 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/base/Module.php(528): yii\console\Controller->runAction('', Array)
+#19 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#20 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#21 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/base/Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#22 /Users/ameyabapat/Desktop/yii framework/yiiplus/yii(23): yii\base\Application->run()
+#23 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: nodename nor servname provided, or not known' in /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php:624
+Stack trace:
+#0 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php(996): yii\db\Connection->open()
+#1 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php(983): yii\db\Connection->getMasterPdo()
+#2 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Command.php(253): yii\db\Connection->getSlavePdo()
+#3 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Command.php(1143): yii\db\Command->prepare(true)
+#4 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Command.php(399): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/mysql/Schema.php(312): yii\db\Command->queryAll()
+#6 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Schema.php(744): yii\db\mysql\Schema->loadTableSchema('migration')
+#8 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Schema.php(194): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#9 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/console/controllers/MigrateController.php(210): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#10 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(875): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#11 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(166): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#12 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#13 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#14 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#15 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/console/Controller.php(148): yii\base\Controller->runAction('', Array)
+#16 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/base/Module.php(528): yii\console\Controller->runAction('', Array)
+#17 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#18 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#19 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/base/Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#20 /Users/ameyabapat/Desktop/yii framework/yiiplus/yii(23): yii\base\Application->run()
+#21 {main}
+Additional Information:
+
+2018-05-15 06:17:12 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'TERM_PROGRAM' => 'Apple_Terminal'
+    'SHELL' => '/bin/bash'
+    'TERM' => 'xterm-256color'
+    'TMPDIR' => '/var/folders/gl/2t4hp82s0_3_2zp11dvzj0jm0000gn/T/'
+    'Apple_PubSub_Socket_Render' => '/private/tmp/com.apple.launchd.xOrOQvUR1F/Render'
+    'TERM_PROGRAM_VERSION' => '388.1.1'
+    'OLDPWD' => '/Users/ameyabapat/Desktop/yii framework/yiiplus/common'
+    'TERM_SESSION_ID' => '52B1E01A-8C9D-483B-8133-16AE31327F2E'
+    'USER' => 'ameyabapat'
+    'SSH_AUTH_SOCK' => '/private/tmp/com.apple.launchd.eck9OeYRwh/Listeners'
+    '__CF_USER_TEXT_ENCODING' => '0x1F5:0x0:0x0'
+    'PATH' => '/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin'
+    'PWD' => '/Users/ameyabapat/Desktop/yii framework/yiiplus'
+    'XPC_FLAGS' => '0x0'
+    'XPC_SERVICE_NAME' => '0'
+    'SHLVL' => '1'
+    'HOME' => '/Users/ameyabapat'
+    'LOGNAME' => 'ameyabapat'
+    'LC_CTYPE' => 'UTF-8'
+    '_' => './yii'
+    'PHP_SELF' => './yii'
+    'SCRIPT_NAME' => './yii'
+    'SCRIPT_FILENAME' => './yii'
+    'PATH_TRANSLATED' => './yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1526365032.701
+    'REQUEST_TIME' => 1526365032
+    'argv' => [
+        0 => './yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
+2018-05-15 08:22:03 [-][-][-][error][yii\db\Exception] exception 'yii\base\ErrorException' with message 'PDO::__construct(): php_network_getaddresses: getaddrinfo failed: nodename nor servname provided, or not known' in /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php:687
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'PDO::__construc...', '/Users/ameyabap...', 687, Array)
+#1 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php(687): PDO->__construct('mysql:host=mysq...', 'root', 'root', NULL)
+#2 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php(613): yii\db\Connection->createPdoInstance()
+#3 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php(996): yii\db\Connection->open()
+#4 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php(983): yii\db\Connection->getMasterPdo()
+#5 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Command.php(253): yii\db\Connection->getSlavePdo()
+#6 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Command.php(1143): yii\db\Command->prepare(true)
+#7 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Command.php(399): yii\db\Command->queryInternal('fetchAll', NULL)
+#8 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/mysql/Schema.php(312): yii\db\Command->queryAll()
+#9 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#10 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Schema.php(744): yii\db\mysql\Schema->loadTableSchema('migration')
+#11 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Schema.php(194): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#12 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/console/controllers/MigrateController.php(210): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#13 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(875): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#14 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(166): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#15 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#16 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#17 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#18 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/console/Controller.php(148): yii\base\Controller->runAction('', Array)
+#19 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/base/Module.php(528): yii\console\Controller->runAction('', Array)
+#20 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#21 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#22 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/base/Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#23 /Users/ameyabapat/Desktop/yii framework/yiiplus/yii(23): yii\base\Application->run()
+#24 {main}
+
+Next exception 'PDOException' with message 'SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: nodename nor servname provided, or not known' in /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php:687
+Stack trace:
+#0 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php(0): PDO->__construct()
+#1 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php(613): yii\db\Connection->createPdoInstance()
+#2 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php(996): yii\db\Connection->open()
+#3 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php(983): yii\db\Connection->getMasterPdo()
+#4 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Command.php(253): yii\db\Connection->getSlavePdo()
+#5 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Command.php(1143): yii\db\Command->prepare(true)
+#6 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Command.php(399): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/mysql/Schema.php(312): yii\db\Command->queryAll()
+#8 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Schema.php(744): yii\db\mysql\Schema->loadTableSchema('migration')
+#10 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Schema.php(194): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#11 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/console/controllers/MigrateController.php(210): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#12 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(875): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#13 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(166): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#14 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#15 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#16 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#17 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/console/Controller.php(148): yii\base\Controller->runAction('', Array)
+#18 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/base/Module.php(528): yii\console\Controller->runAction('', Array)
+#19 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#20 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#21 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/base/Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#22 /Users/ameyabapat/Desktop/yii framework/yiiplus/yii(23): yii\base\Application->run()
+#23 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: nodename nor servname provided, or not known' in /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php:624
+Stack trace:
+#0 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php(996): yii\db\Connection->open()
+#1 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php(983): yii\db\Connection->getMasterPdo()
+#2 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Command.php(253): yii\db\Connection->getSlavePdo()
+#3 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Command.php(1143): yii\db\Command->prepare(true)
+#4 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Command.php(399): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/mysql/Schema.php(312): yii\db\Command->queryAll()
+#6 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Schema.php(744): yii\db\mysql\Schema->loadTableSchema('migration')
+#8 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Schema.php(194): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#9 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/console/controllers/MigrateController.php(210): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#10 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(875): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#11 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(166): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#12 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#13 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#14 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#15 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/console/Controller.php(148): yii\base\Controller->runAction('', Array)
+#16 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/base/Module.php(528): yii\console\Controller->runAction('', Array)
+#17 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#18 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#19 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/base/Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#20 /Users/ameyabapat/Desktop/yii framework/yiiplus/yii(23): yii\base\Application->run()
+#21 {main}
+Additional Information:
+
+2018-05-15 08:22:02 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'TERM_PROGRAM' => 'Apple_Terminal'
+    'SHELL' => '/bin/bash'
+    'TERM' => 'xterm-256color'
+    'TMPDIR' => '/var/folders/gl/2t4hp82s0_3_2zp11dvzj0jm0000gn/T/'
+    'Apple_PubSub_Socket_Render' => '/private/tmp/com.apple.launchd.xOrOQvUR1F/Render'
+    'TERM_PROGRAM_VERSION' => '388.1.1'
+    'OLDPWD' => '/Users/ameyabapat/Desktop/yii framework/yiiplus/common'
+    'TERM_SESSION_ID' => '52B1E01A-8C9D-483B-8133-16AE31327F2E'
+    'USER' => 'ameyabapat'
+    'SSH_AUTH_SOCK' => '/private/tmp/com.apple.launchd.eck9OeYRwh/Listeners'
+    '__CF_USER_TEXT_ENCODING' => '0x1F5:0x0:0x0'
+    'PATH' => '/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin'
+    'PWD' => '/Users/ameyabapat/Desktop/yii framework/yiiplus'
+    'XPC_FLAGS' => '0x0'
+    'XPC_SERVICE_NAME' => '0'
+    'SHLVL' => '1'
+    'HOME' => '/Users/ameyabapat'
+    'LOGNAME' => 'ameyabapat'
+    'LC_CTYPE' => 'UTF-8'
+    '_' => './yii'
+    'PHP_SELF' => './yii'
+    'SCRIPT_NAME' => './yii'
+    'SCRIPT_FILENAME' => './yii'
+    'PATH_TRANSLATED' => './yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1526372522.9165
+    'REQUEST_TIME' => 1526372522
+    'argv' => [
+        0 => './yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
+2018-05-15 08:31:49 [-][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[HY000] [2002] No such file or directory' in /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php:687
+Stack trace:
+#0 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php(687): PDO->__construct('mysql:host=loca...', 'root', 'root', NULL)
+#1 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php(613): yii\db\Connection->createPdoInstance()
+#2 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php(996): yii\db\Connection->open()
+#3 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php(983): yii\db\Connection->getMasterPdo()
+#4 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Command.php(253): yii\db\Connection->getSlavePdo()
+#5 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Command.php(1143): yii\db\Command->prepare(true)
+#6 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Command.php(399): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/mysql/Schema.php(312): yii\db\Command->queryAll()
+#8 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Schema.php(744): yii\db\mysql\Schema->loadTableSchema('migration')
+#10 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Schema.php(194): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#11 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/console/controllers/MigrateController.php(210): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#12 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(875): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#13 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(166): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#14 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#15 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#16 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#17 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/console/Controller.php(148): yii\base\Controller->runAction('', Array)
+#18 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/base/Module.php(528): yii\console\Controller->runAction('', Array)
+#19 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#20 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#21 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/base/Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#22 /Users/ameyabapat/Desktop/yii framework/yiiplus/yii(23): yii\base\Application->run()
+#23 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[HY000] [2002] No such file or directory' in /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php:624
+Stack trace:
+#0 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php(996): yii\db\Connection->open()
+#1 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php(983): yii\db\Connection->getMasterPdo()
+#2 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Command.php(253): yii\db\Connection->getSlavePdo()
+#3 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Command.php(1143): yii\db\Command->prepare(true)
+#4 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Command.php(399): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/mysql/Schema.php(312): yii\db\Command->queryAll()
+#6 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Schema.php(744): yii\db\mysql\Schema->loadTableSchema('migration')
+#8 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Schema.php(194): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#9 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/console/controllers/MigrateController.php(210): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#10 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(875): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#11 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(166): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#12 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#13 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#14 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#15 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/console/Controller.php(148): yii\base\Controller->runAction('', Array)
+#16 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/base/Module.php(528): yii\console\Controller->runAction('', Array)
+#17 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#18 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#19 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/base/Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#20 /Users/ameyabapat/Desktop/yii framework/yiiplus/yii(23): yii\base\Application->run()
+#21 {main}
+Additional Information:
+
+2018-05-15 08:31:48 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'TERM_PROGRAM' => 'Apple_Terminal'
+    'SHELL' => '/bin/bash'
+    'TERM' => 'xterm-256color'
+    'TMPDIR' => '/var/folders/gl/2t4hp82s0_3_2zp11dvzj0jm0000gn/T/'
+    'Apple_PubSub_Socket_Render' => '/private/tmp/com.apple.launchd.xOrOQvUR1F/Render'
+    'TERM_PROGRAM_VERSION' => '388.1.1'
+    'OLDPWD' => '/Users/ameyabapat/Desktop/yii framework'
+    'TERM_SESSION_ID' => '52B1E01A-8C9D-483B-8133-16AE31327F2E'
+    'USER' => 'ameyabapat'
+    'SSH_AUTH_SOCK' => '/private/tmp/com.apple.launchd.eck9OeYRwh/Listeners'
+    '__CF_USER_TEXT_ENCODING' => '0x1F5:0x0:0x0'
+    'PATH' => '/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin'
+    'PWD' => '/Users/ameyabapat/Desktop/yii framework/yiiplus'
+    'XPC_FLAGS' => '0x0'
+    'XPC_SERVICE_NAME' => '0'
+    'SHLVL' => '1'
+    'HOME' => '/Users/ameyabapat'
+    'LOGNAME' => 'ameyabapat'
+    'LC_CTYPE' => 'UTF-8'
+    '_' => './yii'
+    'PHP_SELF' => './yii'
+    'SCRIPT_NAME' => './yii'
+    'SCRIPT_FILENAME' => './yii'
+    'PATH_TRANSLATED' => './yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1526373108.8987
+    'REQUEST_TIME' => 1526373108
+    'argv' => [
+        0 => './yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
+2018-05-15 10:54:57 [-][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[HY000] [2002] No such file or directory' in /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php:687
+Stack trace:
+#0 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php(687): PDO->__construct('mysql:host=loca...', 'root', 'root', NULL)
+#1 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php(613): yii\db\Connection->createPdoInstance()
+#2 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php(996): yii\db\Connection->open()
+#3 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php(983): yii\db\Connection->getMasterPdo()
+#4 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Command.php(253): yii\db\Connection->getSlavePdo()
+#5 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Command.php(1143): yii\db\Command->prepare(true)
+#6 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Command.php(399): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/mysql/Schema.php(312): yii\db\Command->queryAll()
+#8 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Schema.php(744): yii\db\mysql\Schema->loadTableSchema('migration')
+#10 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Schema.php(194): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#11 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/console/controllers/MigrateController.php(210): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#12 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(875): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#13 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(166): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#14 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#15 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#16 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#17 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/console/Controller.php(148): yii\base\Controller->runAction('', Array)
+#18 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/base/Module.php(528): yii\console\Controller->runAction('', Array)
+#19 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#20 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#21 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/base/Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#22 /Users/ameyabapat/Desktop/yii framework/yiiplus/yii(23): yii\base\Application->run()
+#23 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[HY000] [2002] No such file or directory' in /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php:624
+Stack trace:
+#0 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php(996): yii\db\Connection->open()
+#1 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php(983): yii\db\Connection->getMasterPdo()
+#2 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Command.php(253): yii\db\Connection->getSlavePdo()
+#3 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Command.php(1143): yii\db\Command->prepare(true)
+#4 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Command.php(399): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/mysql/Schema.php(312): yii\db\Command->queryAll()
+#6 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Schema.php(744): yii\db\mysql\Schema->loadTableSchema('migration')
+#8 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Schema.php(194): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#9 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/console/controllers/MigrateController.php(210): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#10 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(875): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#11 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(166): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#12 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#13 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#14 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#15 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/console/Controller.php(148): yii\base\Controller->runAction('', Array)
+#16 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/base/Module.php(528): yii\console\Controller->runAction('', Array)
+#17 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#18 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#19 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/base/Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#20 /Users/ameyabapat/Desktop/yii framework/yiiplus/yii(23): yii\base\Application->run()
+#21 {main}
+Additional Information:
+
+2018-05-15 10:54:57 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'TERM_PROGRAM' => 'Apple_Terminal'
+    'SHELL' => '/bin/bash'
+    'TERM' => 'xterm-256color'
+    'TMPDIR' => '/var/folders/gl/2t4hp82s0_3_2zp11dvzj0jm0000gn/T/'
+    'Apple_PubSub_Socket_Render' => '/private/tmp/com.apple.launchd.xOrOQvUR1F/Render'
+    'TERM_PROGRAM_VERSION' => '388.1.1'
+    'OLDPWD' => '/Users/ameyabapat/Desktop/yii framework'
+    'TERM_SESSION_ID' => '52B1E01A-8C9D-483B-8133-16AE31327F2E'
+    'USER' => 'ameyabapat'
+    'SSH_AUTH_SOCK' => '/private/tmp/com.apple.launchd.eck9OeYRwh/Listeners'
+    '__CF_USER_TEXT_ENCODING' => '0x1F5:0x0:0x0'
+    'PATH' => '/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin'
+    'PWD' => '/Users/ameyabapat/Desktop/yii framework/yiiplus'
+    'XPC_FLAGS' => '0x0'
+    'XPC_SERVICE_NAME' => '0'
+    'SHLVL' => '1'
+    'HOME' => '/Users/ameyabapat'
+    'LOGNAME' => 'ameyabapat'
+    'LC_CTYPE' => 'UTF-8'
+    '_' => './yii'
+    'PHP_SELF' => './yii'
+    'SCRIPT_NAME' => './yii'
+    'SCRIPT_FILENAME' => './yii'
+    'PATH_TRANSLATED' => './yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1526381697.1742
+    'REQUEST_TIME' => 1526381697
+    'argv' => [
+        0 => './yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
+2018-05-15 11:00:44 [-][-][-][error][yii\db\Exception] exception 'yii\base\ErrorException' with message 'PDO::__construct(): php_network_getaddresses: getaddrinfo failed: nodename nor servname provided, or not known' in /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php:687
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'PDO::__construc...', '/Users/ameyabap...', 687, Array)
+#1 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php(687): PDO->__construct('mysql:host=mysq...', 'root', 'root', NULL)
+#2 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php(613): yii\db\Connection->createPdoInstance()
+#3 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php(996): yii\db\Connection->open()
+#4 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php(983): yii\db\Connection->getMasterPdo()
+#5 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Command.php(253): yii\db\Connection->getSlavePdo()
+#6 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Command.php(1143): yii\db\Command->prepare(true)
+#7 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Command.php(399): yii\db\Command->queryInternal('fetchAll', NULL)
+#8 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/mysql/Schema.php(312): yii\db\Command->queryAll()
+#9 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#10 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Schema.php(744): yii\db\mysql\Schema->loadTableSchema('migration')
+#11 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Schema.php(194): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#12 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/console/controllers/MigrateController.php(210): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#13 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(875): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#14 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(166): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#15 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#16 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#17 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#18 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/console/Controller.php(148): yii\base\Controller->runAction('', Array)
+#19 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/base/Module.php(528): yii\console\Controller->runAction('', Array)
+#20 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#21 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#22 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/base/Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#23 /Users/ameyabapat/Desktop/yii framework/yiiplus/yii(23): yii\base\Application->run()
+#24 {main}
+
+Next exception 'PDOException' with message 'SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: nodename nor servname provided, or not known' in /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php:687
+Stack trace:
+#0 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php(0): PDO->__construct()
+#1 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php(613): yii\db\Connection->createPdoInstance()
+#2 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php(996): yii\db\Connection->open()
+#3 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php(983): yii\db\Connection->getMasterPdo()
+#4 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Command.php(253): yii\db\Connection->getSlavePdo()
+#5 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Command.php(1143): yii\db\Command->prepare(true)
+#6 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Command.php(399): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/mysql/Schema.php(312): yii\db\Command->queryAll()
+#8 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Schema.php(744): yii\db\mysql\Schema->loadTableSchema('migration')
+#10 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Schema.php(194): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#11 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/console/controllers/MigrateController.php(210): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#12 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(875): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#13 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(166): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#14 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#15 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#16 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#17 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/console/Controller.php(148): yii\base\Controller->runAction('', Array)
+#18 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/base/Module.php(528): yii\console\Controller->runAction('', Array)
+#19 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#20 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#21 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/base/Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#22 /Users/ameyabapat/Desktop/yii framework/yiiplus/yii(23): yii\base\Application->run()
+#23 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: nodename nor servname provided, or not known' in /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php:624
+Stack trace:
+#0 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php(996): yii\db\Connection->open()
+#1 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php(983): yii\db\Connection->getMasterPdo()
+#2 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Command.php(253): yii\db\Connection->getSlavePdo()
+#3 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Command.php(1143): yii\db\Command->prepare(true)
+#4 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Command.php(399): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/mysql/Schema.php(312): yii\db\Command->queryAll()
+#6 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Schema.php(744): yii\db\mysql\Schema->loadTableSchema('migration')
+#8 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/db/Schema.php(194): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#9 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/console/controllers/MigrateController.php(210): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#10 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(875): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#11 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(166): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#12 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#13 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#14 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#15 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/console/Controller.php(148): yii\base\Controller->runAction('', Array)
+#16 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/base/Module.php(528): yii\console\Controller->runAction('', Array)
+#17 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#18 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#19 /Users/ameyabapat/Desktop/yii framework/yiiplus/vendor/yiisoft/yii2/base/Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#20 /Users/ameyabapat/Desktop/yii framework/yiiplus/yii(23): yii\base\Application->run()
+#21 {main}
+Additional Information:
+
+2018-05-15 11:00:43 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'TERM_PROGRAM' => 'Apple_Terminal'
+    'SHELL' => '/bin/bash'
+    'TERM' => 'xterm-256color'
+    'TMPDIR' => '/var/folders/gl/2t4hp82s0_3_2zp11dvzj0jm0000gn/T/'
+    'Apple_PubSub_Socket_Render' => '/private/tmp/com.apple.launchd.xOrOQvUR1F/Render'
+    'TERM_PROGRAM_VERSION' => '388.1.1'
+    'OLDPWD' => '/Users/ameyabapat/Desktop/yii framework'
+    'TERM_SESSION_ID' => '52B1E01A-8C9D-483B-8133-16AE31327F2E'
+    'USER' => 'ameyabapat'
+    'SSH_AUTH_SOCK' => '/private/tmp/com.apple.launchd.eck9OeYRwh/Listeners'
+    '__CF_USER_TEXT_ENCODING' => '0x1F5:0x0:0x0'
+    'PATH' => '/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin'
+    'PWD' => '/Users/ameyabapat/Desktop/yii framework/yiiplus'
+    'XPC_FLAGS' => '0x0'
+    'XPC_SERVICE_NAME' => '0'
+    'SHLVL' => '1'
+    'HOME' => '/Users/ameyabapat'
+    'LOGNAME' => 'ameyabapat'
+    'LC_CTYPE' => 'UTF-8'
+    '_' => './yii'
+    'PHP_SELF' => './yii'
+    'SCRIPT_NAME' => './yii'
+    'SCRIPT_FILENAME' => './yii'
+    'PATH_TRANSLATED' => './yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1526382043.8614
+    'REQUEST_TIME' => 1526382043
+    'argv' => [
+        0 => './yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
+2018-05-17 07:37:10 [-][-][-][error][yii\db\Exception] exception 'yii\base\ErrorException' with message 'PDO::__construct(): php_network_getaddresses: getaddrinfo failed: nodename nor servname provided, or not known' in /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php:687
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'PDO::__construc...', '/Users/ameyabap...', 687, Array)
+#1 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php(687): PDO->__construct('mysql:host=mysq...', 'root', 'root', NULL)
+#2 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php(613): yii\db\Connection->createPdoInstance()
+#3 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php(996): yii\db\Connection->open()
+#4 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php(983): yii\db\Connection->getMasterPdo()
+#5 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/Command.php(253): yii\db\Connection->getSlavePdo()
+#6 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/Command.php(1143): yii\db\Command->prepare(true)
+#7 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/Command.php(399): yii\db\Command->queryInternal('fetchAll', NULL)
+#8 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/mysql/Schema.php(312): yii\db\Command->queryAll()
+#9 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#10 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/Schema.php(744): yii\db\mysql\Schema->loadTableSchema('migration')
+#11 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/Schema.php(194): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#12 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/console/controllers/MigrateController.php(210): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#13 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(875): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#14 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(166): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#15 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#16 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#17 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#18 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/console/Controller.php(148): yii\base\Controller->runAction('', Array)
+#19 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/base/Module.php(528): yii\console\Controller->runAction('', Array)
+#20 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#21 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#22 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/base/Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#23 /Users/ameyabapat/Desktop/yii_framework/yiiplus/yii(23): yii\base\Application->run()
+#24 {main}
+
+Next exception 'PDOException' with message 'SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: nodename nor servname provided, or not known' in /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php:687
+Stack trace:
+#0 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php(0): PDO->__construct()
+#1 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php(613): yii\db\Connection->createPdoInstance()
+#2 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php(996): yii\db\Connection->open()
+#3 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php(983): yii\db\Connection->getMasterPdo()
+#4 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/Command.php(253): yii\db\Connection->getSlavePdo()
+#5 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/Command.php(1143): yii\db\Command->prepare(true)
+#6 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/Command.php(399): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/mysql/Schema.php(312): yii\db\Command->queryAll()
+#8 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/Schema.php(744): yii\db\mysql\Schema->loadTableSchema('migration')
+#10 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/Schema.php(194): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#11 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/console/controllers/MigrateController.php(210): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#12 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(875): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#13 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(166): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#14 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#15 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#16 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#17 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/console/Controller.php(148): yii\base\Controller->runAction('', Array)
+#18 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/base/Module.php(528): yii\console\Controller->runAction('', Array)
+#19 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#20 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#21 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/base/Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#22 /Users/ameyabapat/Desktop/yii_framework/yiiplus/yii(23): yii\base\Application->run()
+#23 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: nodename nor servname provided, or not known' in /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php:624
+Stack trace:
+#0 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php(996): yii\db\Connection->open()
+#1 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php(983): yii\db\Connection->getMasterPdo()
+#2 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/Command.php(253): yii\db\Connection->getSlavePdo()
+#3 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/Command.php(1143): yii\db\Command->prepare(true)
+#4 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/Command.php(399): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/mysql/Schema.php(312): yii\db\Command->queryAll()
+#6 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/Schema.php(744): yii\db\mysql\Schema->loadTableSchema('migration')
+#8 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/Schema.php(194): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#9 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/console/controllers/MigrateController.php(210): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#10 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(875): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#11 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(166): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#12 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#13 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#14 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#15 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/console/Controller.php(148): yii\base\Controller->runAction('', Array)
+#16 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/base/Module.php(528): yii\console\Controller->runAction('', Array)
+#17 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#18 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#19 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/base/Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#20 /Users/ameyabapat/Desktop/yii_framework/yiiplus/yii(23): yii\base\Application->run()
+#21 {main}
+Additional Information:
+
+2018-05-17 07:37:10 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'TERM_PROGRAM' => 'Apple_Terminal'
+    'SHELL' => '/bin/bash'
+    'TERM' => 'xterm-256color'
+    'TMPDIR' => '/var/folders/gl/2t4hp82s0_3_2zp11dvzj0jm0000gn/T/'
+    'Apple_PubSub_Socket_Render' => '/private/tmp/com.apple.launchd.xOrOQvUR1F/Render'
+    'TERM_PROGRAM_VERSION' => '388.1.1'
+    'OLDPWD' => '/Users/ameyabapat'
+    'TERM_SESSION_ID' => '88EFC267-339F-4A77-A48B-55632F140D96'
+    'USER' => 'ameyabapat'
+    'SSH_AUTH_SOCK' => '/private/tmp/com.apple.launchd.eck9OeYRwh/Listeners'
+    '__CF_USER_TEXT_ENCODING' => '0x1F5:0x0:0x0'
+    'PATH' => '/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin'
+    'PWD' => '/Users/ameyabapat/Desktop/yii_framework/yiiplus'
+    'XPC_FLAGS' => '0x0'
+    'XPC_SERVICE_NAME' => '0'
+    'SHLVL' => '1'
+    'HOME' => '/Users/ameyabapat'
+    'LOGNAME' => 'ameyabapat'
+    'LC_CTYPE' => 'UTF-8'
+    '_' => './yii'
+    'PHP_SELF' => './yii'
+    'SCRIPT_NAME' => './yii'
+    'SCRIPT_FILENAME' => './yii'
+    'PATH_TRANSLATED' => './yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1526542630.0857
+    'REQUEST_TIME' => 1526542630
+    'argv' => [
+        0 => './yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
+2018-05-17 07:37:15 [-][-][-][error][yii\db\Exception] exception 'yii\base\ErrorException' with message 'PDO::__construct(): php_network_getaddresses: getaddrinfo failed: nodename nor servname provided, or not known' in /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php:687
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'PDO::__construc...', '/Users/ameyabap...', 687, Array)
+#1 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php(687): PDO->__construct('mysql:host=mysq...', 'root', 'root', NULL)
+#2 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php(613): yii\db\Connection->createPdoInstance()
+#3 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php(996): yii\db\Connection->open()
+#4 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php(983): yii\db\Connection->getMasterPdo()
+#5 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/Command.php(253): yii\db\Connection->getSlavePdo()
+#6 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/Command.php(1143): yii\db\Command->prepare(true)
+#7 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/Command.php(399): yii\db\Command->queryInternal('fetchAll', NULL)
+#8 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/mysql/Schema.php(312): yii\db\Command->queryAll()
+#9 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#10 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/Schema.php(744): yii\db\mysql\Schema->loadTableSchema('migration')
+#11 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/Schema.php(194): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#12 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/console/controllers/MigrateController.php(210): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#13 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(875): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#14 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(166): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#15 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#16 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#17 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#18 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/console/Controller.php(148): yii\base\Controller->runAction('', Array)
+#19 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/base/Module.php(528): yii\console\Controller->runAction('', Array)
+#20 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#21 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#22 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/base/Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#23 /Users/ameyabapat/Desktop/yii_framework/yiiplus/yii(23): yii\base\Application->run()
+#24 {main}
+
+Next exception 'PDOException' with message 'SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: nodename nor servname provided, or not known' in /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php:687
+Stack trace:
+#0 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php(0): PDO->__construct()
+#1 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php(613): yii\db\Connection->createPdoInstance()
+#2 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php(996): yii\db\Connection->open()
+#3 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php(983): yii\db\Connection->getMasterPdo()
+#4 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/Command.php(253): yii\db\Connection->getSlavePdo()
+#5 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/Command.php(1143): yii\db\Command->prepare(true)
+#6 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/Command.php(399): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/mysql/Schema.php(312): yii\db\Command->queryAll()
+#8 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/Schema.php(744): yii\db\mysql\Schema->loadTableSchema('migration')
+#10 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/Schema.php(194): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#11 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/console/controllers/MigrateController.php(210): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#12 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(875): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#13 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(166): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#14 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#15 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#16 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#17 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/console/Controller.php(148): yii\base\Controller->runAction('', Array)
+#18 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/base/Module.php(528): yii\console\Controller->runAction('', Array)
+#19 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#20 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#21 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/base/Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#22 /Users/ameyabapat/Desktop/yii_framework/yiiplus/yii(23): yii\base\Application->run()
+#23 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: nodename nor servname provided, or not known' in /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php:624
+Stack trace:
+#0 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php(996): yii\db\Connection->open()
+#1 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php(983): yii\db\Connection->getMasterPdo()
+#2 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/Command.php(253): yii\db\Connection->getSlavePdo()
+#3 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/Command.php(1143): yii\db\Command->prepare(true)
+#4 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/Command.php(399): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/mysql/Schema.php(312): yii\db\Command->queryAll()
+#6 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/Schema.php(744): yii\db\mysql\Schema->loadTableSchema('migration')
+#8 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/Schema.php(194): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#9 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/console/controllers/MigrateController.php(210): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#10 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(875): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#11 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(166): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#12 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#13 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#14 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#15 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/console/Controller.php(148): yii\base\Controller->runAction('', Array)
+#16 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/base/Module.php(528): yii\console\Controller->runAction('', Array)
+#17 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#18 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#19 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/base/Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#20 /Users/ameyabapat/Desktop/yii_framework/yiiplus/yii(23): yii\base\Application->run()
+#21 {main}
+Additional Information:
+
+2018-05-17 07:37:14 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'TERM_PROGRAM' => 'Apple_Terminal'
+    'SHELL' => '/bin/bash'
+    'TERM' => 'xterm-256color'
+    'TMPDIR' => '/var/folders/gl/2t4hp82s0_3_2zp11dvzj0jm0000gn/T/'
+    'Apple_PubSub_Socket_Render' => '/private/tmp/com.apple.launchd.xOrOQvUR1F/Render'
+    'TERM_PROGRAM_VERSION' => '388.1.1'
+    'OLDPWD' => '/Users/ameyabapat'
+    'TERM_SESSION_ID' => '88EFC267-339F-4A77-A48B-55632F140D96'
+    'USER' => 'ameyabapat'
+    'SSH_AUTH_SOCK' => '/private/tmp/com.apple.launchd.eck9OeYRwh/Listeners'
+    '__CF_USER_TEXT_ENCODING' => '0x1F5:0x0:0x0'
+    'PATH' => '/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin'
+    'PWD' => '/Users/ameyabapat/Desktop/yii_framework/yiiplus'
+    'XPC_FLAGS' => '0x0'
+    'XPC_SERVICE_NAME' => '0'
+    'SHLVL' => '1'
+    'HOME' => '/Users/ameyabapat'
+    'LOGNAME' => 'ameyabapat'
+    'LC_CTYPE' => 'UTF-8'
+    '_' => './yii'
+    'PHP_SELF' => './yii'
+    'SCRIPT_NAME' => './yii'
+    'SCRIPT_FILENAME' => './yii'
+    'PATH_TRANSLATED' => './yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1526542634.9942
+    'REQUEST_TIME' => 1526542634
+    'argv' => [
+        0 => './yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
+2018-05-17 07:37:48 [-][-][-][error][yii\db\Exception] exception 'yii\base\ErrorException' with message 'PDO::__construct(): php_network_getaddresses: getaddrinfo failed: nodename nor servname provided, or not known' in /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php:687
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'PDO::__construc...', '/Users/ameyabap...', 687, Array)
+#1 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php(687): PDO->__construct('mysql:host=mysq...', 'root', 'root', NULL)
+#2 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php(613): yii\db\Connection->createPdoInstance()
+#3 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php(996): yii\db\Connection->open()
+#4 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php(983): yii\db\Connection->getMasterPdo()
+#5 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/Command.php(253): yii\db\Connection->getSlavePdo()
+#6 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/Command.php(1143): yii\db\Command->prepare(true)
+#7 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/Command.php(399): yii\db\Command->queryInternal('fetchAll', NULL)
+#8 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/mysql/Schema.php(312): yii\db\Command->queryAll()
+#9 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#10 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/Schema.php(744): yii\db\mysql\Schema->loadTableSchema('migration')
+#11 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/Schema.php(194): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#12 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/console/controllers/MigrateController.php(210): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#13 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(875): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#14 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(166): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#15 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#16 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#17 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#18 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/console/Controller.php(148): yii\base\Controller->runAction('', Array)
+#19 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/base/Module.php(528): yii\console\Controller->runAction('', Array)
+#20 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#21 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#22 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/base/Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#23 /Users/ameyabapat/Desktop/yii_framework/yiiplus/yii(23): yii\base\Application->run()
+#24 {main}
+
+Next exception 'PDOException' with message 'SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: nodename nor servname provided, or not known' in /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php:687
+Stack trace:
+#0 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php(0): PDO->__construct()
+#1 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php(613): yii\db\Connection->createPdoInstance()
+#2 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php(996): yii\db\Connection->open()
+#3 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php(983): yii\db\Connection->getMasterPdo()
+#4 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/Command.php(253): yii\db\Connection->getSlavePdo()
+#5 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/Command.php(1143): yii\db\Command->prepare(true)
+#6 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/Command.php(399): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/mysql/Schema.php(312): yii\db\Command->queryAll()
+#8 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/Schema.php(744): yii\db\mysql\Schema->loadTableSchema('migration')
+#10 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/Schema.php(194): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#11 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/console/controllers/MigrateController.php(210): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#12 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(875): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#13 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(166): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#14 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#15 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#16 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#17 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/console/Controller.php(148): yii\base\Controller->runAction('', Array)
+#18 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/base/Module.php(528): yii\console\Controller->runAction('', Array)
+#19 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#20 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#21 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/base/Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#22 /Users/ameyabapat/Desktop/yii_framework/yiiplus/yii(23): yii\base\Application->run()
+#23 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: nodename nor servname provided, or not known' in /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php:624
+Stack trace:
+#0 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php(996): yii\db\Connection->open()
+#1 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php(983): yii\db\Connection->getMasterPdo()
+#2 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/Command.php(253): yii\db\Connection->getSlavePdo()
+#3 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/Command.php(1143): yii\db\Command->prepare(true)
+#4 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/Command.php(399): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/mysql/Schema.php(312): yii\db\Command->queryAll()
+#6 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/Schema.php(744): yii\db\mysql\Schema->loadTableSchema('migration')
+#8 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/Schema.php(194): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#9 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/console/controllers/MigrateController.php(210): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#10 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(875): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#11 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(166): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#12 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#13 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#14 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#15 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/console/Controller.php(148): yii\base\Controller->runAction('', Array)
+#16 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/base/Module.php(528): yii\console\Controller->runAction('', Array)
+#17 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#18 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#19 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/base/Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#20 /Users/ameyabapat/Desktop/yii_framework/yiiplus/yii(23): yii\base\Application->run()
+#21 {main}
+Additional Information:
+
+2018-05-17 07:37:48 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'TERM_PROGRAM' => 'Apple_Terminal'
+    'SHELL' => '/bin/bash'
+    'TERM' => 'xterm-256color'
+    'TMPDIR' => '/var/folders/gl/2t4hp82s0_3_2zp11dvzj0jm0000gn/T/'
+    'Apple_PubSub_Socket_Render' => '/private/tmp/com.apple.launchd.xOrOQvUR1F/Render'
+    'TERM_PROGRAM_VERSION' => '388.1.1'
+    'OLDPWD' => '/Users/ameyabapat'
+    'TERM_SESSION_ID' => '88EFC267-339F-4A77-A48B-55632F140D96'
+    'USER' => 'ameyabapat'
+    'SSH_AUTH_SOCK' => '/private/tmp/com.apple.launchd.eck9OeYRwh/Listeners'
+    '__CF_USER_TEXT_ENCODING' => '0x1F5:0x0:0x0'
+    'PATH' => '/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin'
+    'PWD' => '/Users/ameyabapat/Desktop/yii_framework/yiiplus'
+    'XPC_FLAGS' => '0x0'
+    'XPC_SERVICE_NAME' => '0'
+    'SHLVL' => '1'
+    'HOME' => '/Users/ameyabapat'
+    'LOGNAME' => 'ameyabapat'
+    'LC_CTYPE' => 'UTF-8'
+    '_' => './yii'
+    'PHP_SELF' => './yii'
+    'SCRIPT_NAME' => './yii'
+    'SCRIPT_FILENAME' => './yii'
+    'PATH_TRANSLATED' => './yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1526542668.5371
+    'REQUEST_TIME' => 1526542668
+    'argv' => [
+        0 => './yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
+2018-05-17 08:22:16 [-][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[HY000] [2002] Connection refused' in /application/vendor/yiisoft/yii2/db/Connection.php:687
+Stack trace:
+#0 /application/vendor/yiisoft/yii2/db/Connection.php(687): PDO->__construct('mysql:host=127....', 'root', 'root', NULL)
+#1 /application/vendor/yiisoft/yii2/db/Connection.php(613): yii\db\Connection->createPdoInstance()
+#2 /application/vendor/yiisoft/yii2/db/Connection.php(996): yii\db\Connection->open()
+#3 /application/vendor/yiisoft/yii2/db/Connection.php(983): yii\db\Connection->getMasterPdo()
+#4 /application/vendor/yiisoft/yii2/db/Command.php(253): yii\db\Connection->getSlavePdo()
+#5 /application/vendor/yiisoft/yii2/db/Command.php(1143): yii\db\Command->prepare(true)
+#6 /application/vendor/yiisoft/yii2/db/Command.php(399): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 /application/vendor/yiisoft/yii2/db/mysql/Schema.php(312): yii\db\Command->queryAll()
+#8 /application/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 /application/vendor/yiisoft/yii2/db/Schema.php(744): yii\db\mysql\Schema->loadTableSchema('migration')
+#10 /application/vendor/yiisoft/yii2/db/Schema.php(194): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#11 /application/vendor/yiisoft/yii2/console/controllers/MigrateController.php(210): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#12 /application/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(875): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#13 /application/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(166): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#14 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#15 /application/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#16 /application/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#17 /application/vendor/yiisoft/yii2/console/Controller.php(148): yii\base\Controller->runAction('', Array)
+#18 /application/vendor/yiisoft/yii2/base/Module.php(528): yii\console\Controller->runAction('', Array)
+#19 /application/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#20 /application/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#21 /application/vendor/yiisoft/yii2/base/Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#22 /application/yii(23): yii\base\Application->run()
+#23 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[HY000] [2002] Connection refused' in /application/vendor/yiisoft/yii2/db/Connection.php:624
+Stack trace:
+#0 /application/vendor/yiisoft/yii2/db/Connection.php(996): yii\db\Connection->open()
+#1 /application/vendor/yiisoft/yii2/db/Connection.php(983): yii\db\Connection->getMasterPdo()
+#2 /application/vendor/yiisoft/yii2/db/Command.php(253): yii\db\Connection->getSlavePdo()
+#3 /application/vendor/yiisoft/yii2/db/Command.php(1143): yii\db\Command->prepare(true)
+#4 /application/vendor/yiisoft/yii2/db/Command.php(399): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 /application/vendor/yiisoft/yii2/db/mysql/Schema.php(312): yii\db\Command->queryAll()
+#6 /application/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 /application/vendor/yiisoft/yii2/db/Schema.php(744): yii\db\mysql\Schema->loadTableSchema('migration')
+#8 /application/vendor/yiisoft/yii2/db/Schema.php(194): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#9 /application/vendor/yiisoft/yii2/console/controllers/MigrateController.php(210): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#10 /application/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(875): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#11 /application/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(166): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#12 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#13 /application/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#14 /application/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#15 /application/vendor/yiisoft/yii2/console/Controller.php(148): yii\base\Controller->runAction('', Array)
+#16 /application/vendor/yiisoft/yii2/base/Module.php(528): yii\console\Controller->runAction('', Array)
+#17 /application/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#18 /application/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#19 /application/vendor/yiisoft/yii2/base/Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#20 /application/yii(23): yii\base\Application->run()
+#21 {main}
+Additional Information:
+
+2018-05-17 08:22:16 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'HOSTNAME' => 'bbf1ed8c9000'
+    'HOME' => '/root'
+    'TERM' => 'xterm'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'DEBIAN_FRONTEND' => 'noninteractive'
+    'PWD' => '/application'
+    'PHP_SELF' => './yii'
+    'SCRIPT_NAME' => './yii'
+    'SCRIPT_FILENAME' => './yii'
+    'PATH_TRANSLATED' => './yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1526545335.9286
+    'REQUEST_TIME' => 1526545335
+    'argv' => [
+        0 => './yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
+2018-05-17 08:23:20 [-][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[HY000] [2002] Connection refused' in /application/vendor/yiisoft/yii2/db/Connection.php:687
+Stack trace:
+#0 /application/vendor/yiisoft/yii2/db/Connection.php(687): PDO->__construct('mysql:host=0.0....', 'root', 'root', NULL)
+#1 /application/vendor/yiisoft/yii2/db/Connection.php(613): yii\db\Connection->createPdoInstance()
+#2 /application/vendor/yiisoft/yii2/db/Connection.php(996): yii\db\Connection->open()
+#3 /application/vendor/yiisoft/yii2/db/Connection.php(983): yii\db\Connection->getMasterPdo()
+#4 /application/vendor/yiisoft/yii2/db/Command.php(253): yii\db\Connection->getSlavePdo()
+#5 /application/vendor/yiisoft/yii2/db/Command.php(1143): yii\db\Command->prepare(true)
+#6 /application/vendor/yiisoft/yii2/db/Command.php(399): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 /application/vendor/yiisoft/yii2/db/mysql/Schema.php(312): yii\db\Command->queryAll()
+#8 /application/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 /application/vendor/yiisoft/yii2/db/Schema.php(744): yii\db\mysql\Schema->loadTableSchema('migration')
+#10 /application/vendor/yiisoft/yii2/db/Schema.php(194): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#11 /application/vendor/yiisoft/yii2/console/controllers/MigrateController.php(210): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#12 /application/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(875): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#13 /application/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(166): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#14 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#15 /application/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#16 /application/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#17 /application/vendor/yiisoft/yii2/console/Controller.php(148): yii\base\Controller->runAction('', Array)
+#18 /application/vendor/yiisoft/yii2/base/Module.php(528): yii\console\Controller->runAction('', Array)
+#19 /application/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#20 /application/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#21 /application/vendor/yiisoft/yii2/base/Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#22 /application/yii(23): yii\base\Application->run()
+#23 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[HY000] [2002] Connection refused' in /application/vendor/yiisoft/yii2/db/Connection.php:624
+Stack trace:
+#0 /application/vendor/yiisoft/yii2/db/Connection.php(996): yii\db\Connection->open()
+#1 /application/vendor/yiisoft/yii2/db/Connection.php(983): yii\db\Connection->getMasterPdo()
+#2 /application/vendor/yiisoft/yii2/db/Command.php(253): yii\db\Connection->getSlavePdo()
+#3 /application/vendor/yiisoft/yii2/db/Command.php(1143): yii\db\Command->prepare(true)
+#4 /application/vendor/yiisoft/yii2/db/Command.php(399): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 /application/vendor/yiisoft/yii2/db/mysql/Schema.php(312): yii\db\Command->queryAll()
+#6 /application/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 /application/vendor/yiisoft/yii2/db/Schema.php(744): yii\db\mysql\Schema->loadTableSchema('migration')
+#8 /application/vendor/yiisoft/yii2/db/Schema.php(194): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#9 /application/vendor/yiisoft/yii2/console/controllers/MigrateController.php(210): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#10 /application/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(875): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#11 /application/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(166): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#12 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#13 /application/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#14 /application/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#15 /application/vendor/yiisoft/yii2/console/Controller.php(148): yii\base\Controller->runAction('', Array)
+#16 /application/vendor/yiisoft/yii2/base/Module.php(528): yii\console\Controller->runAction('', Array)
+#17 /application/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#18 /application/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#19 /application/vendor/yiisoft/yii2/base/Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#20 /application/yii(23): yii\base\Application->run()
+#21 {main}
+Additional Information:
+
+2018-05-17 08:23:19 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'HOSTNAME' => 'bbf1ed8c9000'
+    'HOME' => '/root'
+    'TERM' => 'xterm'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'DEBIAN_FRONTEND' => 'noninteractive'
+    'PWD' => '/application'
+    'PHP_SELF' => './yii'
+    'SCRIPT_NAME' => './yii'
+    'SCRIPT_FILENAME' => './yii'
+    'PATH_TRANSLATED' => './yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1526545399.8672
+    'REQUEST_TIME' => 1526545399
+    'argv' => [
+        0 => './yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
+2018-05-17 08:24:20 [-][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[HY000] [2002] Cannot assign requested address' in /application/vendor/yiisoft/yii2/db/Connection.php:687
+Stack trace:
+#0 /application/vendor/yiisoft/yii2/db/Connection.php(687): PDO->__construct('mysql:host=loca...', 'root', 'root', NULL)
+#1 /application/vendor/yiisoft/yii2/db/Connection.php(613): yii\db\Connection->createPdoInstance()
+#2 /application/vendor/yiisoft/yii2/db/Connection.php(996): yii\db\Connection->open()
+#3 /application/vendor/yiisoft/yii2/db/Connection.php(983): yii\db\Connection->getMasterPdo()
+#4 /application/vendor/yiisoft/yii2/db/Command.php(253): yii\db\Connection->getSlavePdo()
+#5 /application/vendor/yiisoft/yii2/db/Command.php(1143): yii\db\Command->prepare(true)
+#6 /application/vendor/yiisoft/yii2/db/Command.php(399): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 /application/vendor/yiisoft/yii2/db/mysql/Schema.php(312): yii\db\Command->queryAll()
+#8 /application/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 /application/vendor/yiisoft/yii2/db/Schema.php(744): yii\db\mysql\Schema->loadTableSchema('migration')
+#10 /application/vendor/yiisoft/yii2/db/Schema.php(194): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#11 /application/vendor/yiisoft/yii2/console/controllers/MigrateController.php(210): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#12 /application/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(875): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#13 /application/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(166): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#14 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#15 /application/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#16 /application/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#17 /application/vendor/yiisoft/yii2/console/Controller.php(148): yii\base\Controller->runAction('', Array)
+#18 /application/vendor/yiisoft/yii2/base/Module.php(528): yii\console\Controller->runAction('', Array)
+#19 /application/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#20 /application/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#21 /application/vendor/yiisoft/yii2/base/Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#22 /application/yii(23): yii\base\Application->run()
+#23 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[HY000] [2002] Cannot assign requested address' in /application/vendor/yiisoft/yii2/db/Connection.php:624
+Stack trace:
+#0 /application/vendor/yiisoft/yii2/db/Connection.php(996): yii\db\Connection->open()
+#1 /application/vendor/yiisoft/yii2/db/Connection.php(983): yii\db\Connection->getMasterPdo()
+#2 /application/vendor/yiisoft/yii2/db/Command.php(253): yii\db\Connection->getSlavePdo()
+#3 /application/vendor/yiisoft/yii2/db/Command.php(1143): yii\db\Command->prepare(true)
+#4 /application/vendor/yiisoft/yii2/db/Command.php(399): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 /application/vendor/yiisoft/yii2/db/mysql/Schema.php(312): yii\db\Command->queryAll()
+#6 /application/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 /application/vendor/yiisoft/yii2/db/Schema.php(744): yii\db\mysql\Schema->loadTableSchema('migration')
+#8 /application/vendor/yiisoft/yii2/db/Schema.php(194): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#9 /application/vendor/yiisoft/yii2/console/controllers/MigrateController.php(210): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#10 /application/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(875): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#11 /application/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(166): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#12 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#13 /application/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#14 /application/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#15 /application/vendor/yiisoft/yii2/console/Controller.php(148): yii\base\Controller->runAction('', Array)
+#16 /application/vendor/yiisoft/yii2/base/Module.php(528): yii\console\Controller->runAction('', Array)
+#17 /application/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#18 /application/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#19 /application/vendor/yiisoft/yii2/base/Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#20 /application/yii(23): yii\base\Application->run()
+#21 {main}
+Additional Information:
+
+2018-05-17 08:24:20 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'HOSTNAME' => 'bbf1ed8c9000'
+    'HOME' => '/root'
+    'TERM' => 'xterm'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'DEBIAN_FRONTEND' => 'noninteractive'
+    'PWD' => '/application'
+    'PHP_SELF' => './yii'
+    'SCRIPT_NAME' => './yii'
+    'SCRIPT_FILENAME' => './yii'
+    'PATH_TRANSLATED' => './yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1526545460.2795
+    'REQUEST_TIME' => 1526545460
+    'argv' => [
+        0 => './yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
+2018-05-17 08:24:36 [-][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[HY000] [2002] Connection refused' in /application/vendor/yiisoft/yii2/db/Connection.php:687
+Stack trace:
+#0 /application/vendor/yiisoft/yii2/db/Connection.php(687): PDO->__construct('mysql:host=e906...', 'root', 'root', NULL)
+#1 /application/vendor/yiisoft/yii2/db/Connection.php(613): yii\db\Connection->createPdoInstance()
+#2 /application/vendor/yiisoft/yii2/db/Connection.php(996): yii\db\Connection->open()
+#3 /application/vendor/yiisoft/yii2/db/Connection.php(983): yii\db\Connection->getMasterPdo()
+#4 /application/vendor/yiisoft/yii2/db/Command.php(253): yii\db\Connection->getSlavePdo()
+#5 /application/vendor/yiisoft/yii2/db/Command.php(1143): yii\db\Command->prepare(true)
+#6 /application/vendor/yiisoft/yii2/db/Command.php(399): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 /application/vendor/yiisoft/yii2/db/mysql/Schema.php(312): yii\db\Command->queryAll()
+#8 /application/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 /application/vendor/yiisoft/yii2/db/Schema.php(744): yii\db\mysql\Schema->loadTableSchema('migration')
+#10 /application/vendor/yiisoft/yii2/db/Schema.php(194): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#11 /application/vendor/yiisoft/yii2/console/controllers/MigrateController.php(210): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#12 /application/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(875): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#13 /application/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(166): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#14 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#15 /application/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#16 /application/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#17 /application/vendor/yiisoft/yii2/console/Controller.php(148): yii\base\Controller->runAction('', Array)
+#18 /application/vendor/yiisoft/yii2/base/Module.php(528): yii\console\Controller->runAction('', Array)
+#19 /application/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#20 /application/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#21 /application/vendor/yiisoft/yii2/base/Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#22 /application/yii(23): yii\base\Application->run()
+#23 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[HY000] [2002] Connection refused' in /application/vendor/yiisoft/yii2/db/Connection.php:624
+Stack trace:
+#0 /application/vendor/yiisoft/yii2/db/Connection.php(996): yii\db\Connection->open()
+#1 /application/vendor/yiisoft/yii2/db/Connection.php(983): yii\db\Connection->getMasterPdo()
+#2 /application/vendor/yiisoft/yii2/db/Command.php(253): yii\db\Connection->getSlavePdo()
+#3 /application/vendor/yiisoft/yii2/db/Command.php(1143): yii\db\Command->prepare(true)
+#4 /application/vendor/yiisoft/yii2/db/Command.php(399): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 /application/vendor/yiisoft/yii2/db/mysql/Schema.php(312): yii\db\Command->queryAll()
+#6 /application/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 /application/vendor/yiisoft/yii2/db/Schema.php(744): yii\db\mysql\Schema->loadTableSchema('migration')
+#8 /application/vendor/yiisoft/yii2/db/Schema.php(194): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#9 /application/vendor/yiisoft/yii2/console/controllers/MigrateController.php(210): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#10 /application/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(875): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#11 /application/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(166): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#12 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#13 /application/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#14 /application/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#15 /application/vendor/yiisoft/yii2/console/Controller.php(148): yii\base\Controller->runAction('', Array)
+#16 /application/vendor/yiisoft/yii2/base/Module.php(528): yii\console\Controller->runAction('', Array)
+#17 /application/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#18 /application/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#19 /application/vendor/yiisoft/yii2/base/Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#20 /application/yii(23): yii\base\Application->run()
+#21 {main}
+Additional Information:
+
+2018-05-17 08:24:36 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'HOSTNAME' => 'bbf1ed8c9000'
+    'HOME' => '/root'
+    'TERM' => 'xterm'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'DEBIAN_FRONTEND' => 'noninteractive'
+    'PWD' => '/application'
+    'PHP_SELF' => './yii'
+    'SCRIPT_NAME' => './yii'
+    'SCRIPT_FILENAME' => './yii'
+    'PATH_TRANSLATED' => './yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1526545476.4323
+    'REQUEST_TIME' => 1526545476
+    'argv' => [
+        0 => './yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
+2018-05-21 05:35:51 [-][-][-][error][yii\db\Exception] exception 'yii\base\ErrorException' with message 'PDO::__construct(): php_network_getaddresses: getaddrinfo failed: nodename nor servname provided, or not known' in /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php:687
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'PDO::__construc...', '/Users/ameyabap...', 687, Array)
+#1 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php(687): PDO->__construct('mysql:host=mysq...', 'root', 'root', NULL)
+#2 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php(613): yii\db\Connection->createPdoInstance()
+#3 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php(996): yii\db\Connection->open()
+#4 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php(983): yii\db\Connection->getMasterPdo()
+#5 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/Command.php(253): yii\db\Connection->getSlavePdo()
+#6 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/Command.php(1143): yii\db\Command->prepare(true)
+#7 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/Command.php(399): yii\db\Command->queryInternal('fetchAll', NULL)
+#8 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/mysql/Schema.php(312): yii\db\Command->queryAll()
+#9 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#10 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/Schema.php(744): yii\db\mysql\Schema->loadTableSchema('migration')
+#11 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/Schema.php(194): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#12 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/console/controllers/MigrateController.php(210): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#13 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(875): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#14 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(166): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#15 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#16 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#17 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#18 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/console/Controller.php(148): yii\base\Controller->runAction('', Array)
+#19 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/base/Module.php(528): yii\console\Controller->runAction('', Array)
+#20 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#21 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#22 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/base/Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#23 /Users/ameyabapat/Desktop/yii_framework/yiiplus/yii(23): yii\base\Application->run()
+#24 {main}
+
+Next exception 'PDOException' with message 'SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: nodename nor servname provided, or not known' in /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php:687
+Stack trace:
+#0 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php(0): PDO->__construct()
+#1 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php(613): yii\db\Connection->createPdoInstance()
+#2 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php(996): yii\db\Connection->open()
+#3 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php(983): yii\db\Connection->getMasterPdo()
+#4 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/Command.php(253): yii\db\Connection->getSlavePdo()
+#5 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/Command.php(1143): yii\db\Command->prepare(true)
+#6 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/Command.php(399): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/mysql/Schema.php(312): yii\db\Command->queryAll()
+#8 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/Schema.php(744): yii\db\mysql\Schema->loadTableSchema('migration')
+#10 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/Schema.php(194): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#11 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/console/controllers/MigrateController.php(210): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#12 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(875): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#13 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(166): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#14 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#15 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#16 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#17 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/console/Controller.php(148): yii\base\Controller->runAction('', Array)
+#18 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/base/Module.php(528): yii\console\Controller->runAction('', Array)
+#19 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#20 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#21 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/base/Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#22 /Users/ameyabapat/Desktop/yii_framework/yiiplus/yii(23): yii\base\Application->run()
+#23 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: nodename nor servname provided, or not known' in /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php:624
+Stack trace:
+#0 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php(996): yii\db\Connection->open()
+#1 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php(983): yii\db\Connection->getMasterPdo()
+#2 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/Command.php(253): yii\db\Connection->getSlavePdo()
+#3 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/Command.php(1143): yii\db\Command->prepare(true)
+#4 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/Command.php(399): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/mysql/Schema.php(312): yii\db\Command->queryAll()
+#6 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/Schema.php(744): yii\db\mysql\Schema->loadTableSchema('migration')
+#8 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/Schema.php(194): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#9 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/console/controllers/MigrateController.php(210): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#10 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(875): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#11 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(166): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#12 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#13 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#14 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#15 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/console/Controller.php(148): yii\base\Controller->runAction('', Array)
+#16 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/base/Module.php(528): yii\console\Controller->runAction('', Array)
+#17 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#18 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#19 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/base/Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#20 /Users/ameyabapat/Desktop/yii_framework/yiiplus/yii(23): yii\base\Application->run()
+#21 {main}
+Additional Information:
+
+2018-05-21 05:35:51 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'TERM_PROGRAM' => 'Apple_Terminal'
+    'TERM' => 'xterm-256color'
+    'SHELL' => '/bin/bash'
+    'TMPDIR' => '/var/folders/gl/2t4hp82s0_3_2zp11dvzj0jm0000gn/T/'
+    'Apple_PubSub_Socket_Render' => '/private/tmp/com.apple.launchd.xOrOQvUR1F/Render'
+    'TERM_PROGRAM_VERSION' => '388.1.1'
+    'OLDPWD' => '/Users/ameyabapat/Work/pharmeasy-backend'
+    'TERM_SESSION_ID' => 'EF60DC79-3427-4EDD-9EC2-20AD3368462D'
+    'USER' => 'ameyabapat'
+    'SSH_AUTH_SOCK' => '/private/tmp/com.apple.launchd.eck9OeYRwh/Listeners'
+    '__CF_USER_TEXT_ENCODING' => '0x1F5:0x0:0x0'
+    'PATH' => '/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin'
+    'PWD' => '/Users/ameyabapat/Desktop/yii_framework/yiiplus'
+    'XPC_FLAGS' => '0x0'
+    'XPC_SERVICE_NAME' => '0'
+    'HOME' => '/Users/ameyabapat'
+    'SHLVL' => '1'
+    'LOGNAME' => 'ameyabapat'
+    'LC_CTYPE' => 'UTF-8'
+    '_' => './yii'
+    'PHP_SELF' => './yii'
+    'SCRIPT_NAME' => './yii'
+    'SCRIPT_FILENAME' => './yii'
+    'PATH_TRANSLATED' => './yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1526880951.2452
+    'REQUEST_TIME' => 1526880951
+    'argv' => [
+        0 => './yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
+2018-05-21 05:38:35 [-][-][-][error][yii\db\Exception] exception 'yii\base\ErrorException' with message 'PDO::__construct(): php_network_getaddresses: getaddrinfo failed: nodename nor servname provided, or not known' in /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php:687
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'PDO::__construc...', '/Users/ameyabap...', 687, Array)
+#1 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php(687): PDO->__construct('mysql:host=mysq...', 'root', 'root', NULL)
+#2 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php(613): yii\db\Connection->createPdoInstance()
+#3 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php(996): yii\db\Connection->open()
+#4 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php(983): yii\db\Connection->getMasterPdo()
+#5 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/Command.php(253): yii\db\Connection->getSlavePdo()
+#6 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/Command.php(1143): yii\db\Command->prepare(true)
+#7 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/Command.php(399): yii\db\Command->queryInternal('fetchAll', NULL)
+#8 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/mysql/Schema.php(312): yii\db\Command->queryAll()
+#9 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#10 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/Schema.php(744): yii\db\mysql\Schema->loadTableSchema('migration')
+#11 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/Schema.php(194): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#12 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/console/controllers/MigrateController.php(210): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#13 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(875): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#14 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(166): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#15 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#16 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#17 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#18 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/console/Controller.php(148): yii\base\Controller->runAction('', Array)
+#19 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/base/Module.php(528): yii\console\Controller->runAction('', Array)
+#20 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#21 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#22 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/base/Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#23 /Users/ameyabapat/Desktop/yii_framework/yiiplus/yii(23): yii\base\Application->run()
+#24 {main}
+
+Next exception 'PDOException' with message 'SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: nodename nor servname provided, or not known' in /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php:687
+Stack trace:
+#0 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php(0): PDO->__construct()
+#1 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php(613): yii\db\Connection->createPdoInstance()
+#2 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php(996): yii\db\Connection->open()
+#3 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php(983): yii\db\Connection->getMasterPdo()
+#4 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/Command.php(253): yii\db\Connection->getSlavePdo()
+#5 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/Command.php(1143): yii\db\Command->prepare(true)
+#6 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/Command.php(399): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/mysql/Schema.php(312): yii\db\Command->queryAll()
+#8 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/Schema.php(744): yii\db\mysql\Schema->loadTableSchema('migration')
+#10 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/Schema.php(194): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#11 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/console/controllers/MigrateController.php(210): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#12 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(875): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#13 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(166): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#14 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#15 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#16 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#17 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/console/Controller.php(148): yii\base\Controller->runAction('', Array)
+#18 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/base/Module.php(528): yii\console\Controller->runAction('', Array)
+#19 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#20 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#21 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/base/Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#22 /Users/ameyabapat/Desktop/yii_framework/yiiplus/yii(23): yii\base\Application->run()
+#23 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: nodename nor servname provided, or not known' in /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php:624
+Stack trace:
+#0 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php(996): yii\db\Connection->open()
+#1 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/Connection.php(983): yii\db\Connection->getMasterPdo()
+#2 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/Command.php(253): yii\db\Connection->getSlavePdo()
+#3 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/Command.php(1143): yii\db\Command->prepare(true)
+#4 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/Command.php(399): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/mysql/Schema.php(312): yii\db\Command->queryAll()
+#6 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/Schema.php(744): yii\db\mysql\Schema->loadTableSchema('migration')
+#8 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/db/Schema.php(194): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#9 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/console/controllers/MigrateController.php(210): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#10 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(875): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#11 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(166): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#12 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#13 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#14 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#15 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/console/Controller.php(148): yii\base\Controller->runAction('', Array)
+#16 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/base/Module.php(528): yii\console\Controller->runAction('', Array)
+#17 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#18 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#19 /Users/ameyabapat/Desktop/yii_framework/yiiplus/vendor/yiisoft/yii2/base/Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#20 /Users/ameyabapat/Desktop/yii_framework/yiiplus/yii(23): yii\base\Application->run()
+#21 {main}
+Additional Information:
+
+2018-05-21 05:38:35 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'TERM_PROGRAM' => 'Apple_Terminal'
+    'TERM' => 'xterm-256color'
+    'SHELL' => '/bin/bash'
+    'TMPDIR' => '/var/folders/gl/2t4hp82s0_3_2zp11dvzj0jm0000gn/T/'
+    'Apple_PubSub_Socket_Render' => '/private/tmp/com.apple.launchd.xOrOQvUR1F/Render'
+    'TERM_PROGRAM_VERSION' => '388.1.1'
+    'OLDPWD' => '/Users/ameyabapat/Work/pharmeasy-backend'
+    'TERM_SESSION_ID' => 'EF60DC79-3427-4EDD-9EC2-20AD3368462D'
+    'USER' => 'ameyabapat'
+    'SSH_AUTH_SOCK' => '/private/tmp/com.apple.launchd.eck9OeYRwh/Listeners'
+    '__CF_USER_TEXT_ENCODING' => '0x1F5:0x0:0x0'
+    'PATH' => '/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin'
+    'PWD' => '/Users/ameyabapat/Desktop/yii_framework/yiiplus'
+    'XPC_FLAGS' => '0x0'
+    'XPC_SERVICE_NAME' => '0'
+    'HOME' => '/Users/ameyabapat'
+    'SHLVL' => '1'
+    'LOGNAME' => 'ameyabapat'
+    'LC_CTYPE' => 'UTF-8'
+    '_' => './yii'
+    'PHP_SELF' => './yii'
+    'SCRIPT_NAME' => './yii'
+    'SCRIPT_FILENAME' => './yii'
+    'PATH_TRANSLATED' => './yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1526881115.3692
+    'REQUEST_TIME' => 1526881115
+    'argv' => [
+        0 => './yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]

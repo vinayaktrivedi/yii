@@ -7,6 +7,7 @@ use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
 use common\models\LoginForm;
 use app\models\EntryForm;
+use backend\models\Testing;
 /**
  * Site controller
  */
@@ -70,8 +71,9 @@ class SiteController extends Controller
             // valid data received in $model
 
             // do something meaningful here about $model ...
-
-            return $this->render('entry-confirm', ['model' => $model]);
+            $newmodel=new Testing();
+            $var=$newmodel::rediscache();
+            return $this->render('entry-confirm', ['model' => $model,'value'=> $var]);
         } else {
             // either the page is initially displayed or there is some validation error
             return $this->render('entry', ['model' => $model]);
@@ -99,7 +101,7 @@ class SiteController extends Controller
             ]);
         }
     }
-
+    
     /**
      * Logout action.
      *
